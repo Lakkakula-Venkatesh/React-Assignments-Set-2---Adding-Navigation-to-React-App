@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 import "../styles/App.css";
 import LocationDisplay from "./LocationDisplay";
-import { Link, Route, Switch, useLocation } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 function About() {
   return <div>You are on the about page.</div>;
 }
@@ -12,6 +12,7 @@ function Home() {
 function Invalid() {
   return <div>No match</div>;
 }
+
 class App extends Component {
   render() {
     return (
