@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 import "../styles/App.css";
 import LocationDisplay from "./LocationDisplay";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Link, Route, Switch, useLocation } from "react-router-dom";
 function About() {
   return <div>You are on the about page.</div>;
 }
@@ -17,8 +17,8 @@ class App extends Component {
     return (
       <>
         <div id="main">{/* Do not remove the main div */}
-          <a href="/">Home</a>
-          <a href="/about">About</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
           <Switch>
             <Route path="/about" component={About} />
             <Route path="/" exact component={Home} />
