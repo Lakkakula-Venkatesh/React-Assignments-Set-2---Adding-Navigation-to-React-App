@@ -1,14 +1,16 @@
 import React, { Component, useState } from "react";
 import "../styles/App.css";
-import LocationDisplay from "./LocationDisplay";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link, Route, Switch, useLocation } from "react-router-dom";
 function About() {
   return <div>You are on the about page.</div>;
 }
 function Home() {
   return <div>You are home.</div>;
 }
-
+function LocationDisplay() {
+  let location = useLocation();
+  return <div data-testid="location-display">{location.pathname}</div>;
+}
 function Invalid() {
   return <div>No match</div>;
 }
