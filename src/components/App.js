@@ -16,15 +16,16 @@ class App extends Component {
   render() {
     return (
       <>
-        <div id="main">{/* Do not remove the main div */}</div>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <Switch>
-          <Route path="/about" component={About} />
-          <Route path="/" exact component={Home} />
-          <Route path="/" component={Invalid} />
-        </Switch>
-        <LocationDisplay />
+        <div id="main">{/* Do not remove the main div */}
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/" exact component={Home} />
+            <Route path="/" component={Invalid} />
+          </Switch>
+          <LocationDisplay />
+        </div>
       </>
     );
   }
